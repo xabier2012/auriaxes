@@ -8,7 +8,7 @@ const AboutSection = () => {
         <div className="order-2 md:order-1 h-full min-h-[400px] relative rounded-xl overflow-hidden shadow-2xl border border-gray-700 group">
           <div className="absolute inset-0 bg-auria-green-400/20 group-hover:bg-auria-green-400/10 transition-colors duration-500 z-10"></div>
           <img 
-            src="/assets/images/silueta_oficina.jpg" 
+            src="assets/images/silueta_oficina.jpg" 
             alt="Oficina Auriaxes" 
             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
             loading="lazy"

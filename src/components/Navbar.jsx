@@ -30,21 +30,21 @@ const Navbar = ({ scrollToSection }) => {
         {/* Logo */}
         <div className="flex items-center gap-4">
           <img
-            src="/assets/images/auriaxes-asesores.jpg"
+            src="assets/images/auriaxes-asesores.jpg"
             alt="Logotipo de Auriaxes Asesores"
             className="h-12 md:h-16 w-auto object-contain"
             loading="lazy"
             decoding="async"
           />
           <img
-            src="/assets/images/economistas_logo.png"
+            src="assets/images/economistas_logo.png"
             alt="Logotipo Economistas"
             className="h-12 md:h-16 w-auto object-contain"
             loading="lazy"
             decoding="async"
           />
           <img
-            src="/assets/images/gestoria_administrativa_logo.png"
+            src="assets/images/gestoria_administrativa_logo.png"
             alt="Logotipo Gestoría Administrativa"
             className="h-12 md:h-16 w-auto object-contain"
             loading="lazy"

@@ -92,7 +92,7 @@ const Hero = ({ scrollToSection }) => {
              <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay pointer-events-none"></div>
              
              <img 
-                src="/assets/images/distintivos_dgt.jpg" 
+                src="assets/images/distintivos_dgt.jpg" 
                 alt="Gestión de Distintivos DGT" 
                 className="h-[55vh] md:h-[65vh] w-auto object-contain relative z-10 shadow-2xl rounded-lg"
                 loading="lazy"
@@ -109,7 +109,7 @@ const Hero = ({ scrollToSection }) => {
              <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay pointer-events-none"></div>
 
              <img 
-                src="/assets/images/tramites_trafico.jpg" 
+                src="assets/images/tramites_trafico.jpg" 
                 alt="Gestión de Trámites de Tráfico" 
                 className="h-[55vh] md:h-[65vh] w-auto object-contain relative z-10 shadow-2xl rounded-lg"
                 loading="lazy"
