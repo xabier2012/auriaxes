@@ -5,21 +5,18 @@ import {
   MapPin, 
   Menu, 
   X, 
-  Calculator, 
+  Landmark, 
   Briefcase, 
   Scale, 
-  Users, 
+  BarChart4, 
   CheckCircle, 
-  Rocket, 
+  TrendingUp, 
   Clock,
-  FileText,
   ArrowRight,
   Car,
-  ScrollText,
-  Globe
 } from 'lucide-react';
 
-const AuriaxesWeb = () => {
+const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -50,7 +47,7 @@ const AuriaxesWeb = () => {
     <div className="font-sans text-slate-800 bg-white min-h-screen flex flex-col">
       
       {/* --- TOP BAR --- */}
-      <div className="bg-slate-900 text-slate-300 py-2 text-xs md:text-sm">
+      <div id="barra-contacto-rapido" className="bg-slate-900 text-slate-300 py-2 text-xs md:text-sm">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="flex gap-4">
             <span className="flex items-center gap-2 hover:text-amber-400 transition-colors cursor-pointer">
@@ -68,25 +65,26 @@ const AuriaxesWeb = () => {
       </div>
 
       {/* --- NAVIGATION --- */}
-      <nav className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-lg py-2' : 'bg-white/95 backdrop-blur py-4'}`}>
+      <nav id="navegacion-principal" className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-lg py-2' : 'bg-white/95 backdrop-blur py-4'}`}>
         <div className="container mx-auto px-4 flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="bg-slate-900 text-amber-500 p-2 rounded-sm font-bold text-xl tracking-tighter border-b-4 border-amber-500">
-              AX
-            </div>
-            <div className="leading-tight">
-              <h1 className="text-xl md:text-2xl font-bold text-slate-900 tracking-wide">AURIAXES</h1>
-              <p className="text-xs text-slate-500 tracking-widest uppercase">Asesores</p>
-            </div>
+          <div className="flex items-center">
+            <img
+              src="/assets/images/auriaxes-asesores.jpg"
+              alt="Logotipo de Auriaxes Asesores"
+              className="h-16 w-auto object-contain"
+              loading="lazy"
+              decoding="async"
+            />
+            <h1 className="sr-only">AURIAXES Asesores</h1>
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex gap-8 font-medium text-slate-600">
-            <button onClick={() => scrollToSection('inicio')} className="hover:text-amber-600 transition-colors">Inicio</button>
+          <div className="hidden md:flex gap-8 font-medium text-slate-600" aria-label="Navegación principal">
+            <button onClick={() => scrollToSection('hero-inicio')} className="hover:text-amber-600 transition-colors">Inicio</button>
             <button onClick={() => scrollToSection('servicios')} className="hover:text-amber-600 transition-colors">Servicios</button>
-            <button onClick={() => scrollToSection('nosotros')} className="hover:text-amber-600 transition-colors">La Firma</button>
-            <button onClick={() => scrollToSection('contacto')} className="hover:text-amber-600 transition-colors">Contacto</button>
+            <button onClick={() => scrollToSection('sobre-nosotros')} className="hover:text-amber-600 transition-colors">La Firma</button>
+            <button onClick={() => scrollToSection('ubicacion-contacto')} className="hover:text-amber-600 transition-colors">Contacto</button>
           </div>
 
           {/* CTA Phone Link - FIXED: target="_blank" prevents white flash/navigation attempt on current page */}
@@ -109,16 +107,17 @@ const AuriaxesWeb = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-slate-100 flex flex-col py-4">
-            <button onClick={() => scrollToSection('inicio')} className="py-3 px-6 text-left hover:bg-slate-50 font-medium">Inicio</button>
+            <button onClick={() => scrollToSection('hero-inicio')} className="py-3 px-6 text-left hover:bg-slate-50 font-medium">Inicio</button>
             <button onClick={() => scrollToSection('servicios')} className="py-3 px-6 text-left hover:bg-slate-50 font-medium">Servicios</button>
-            <button onClick={() => scrollToSection('nosotros')} className="py-3 px-6 text-left hover:bg-slate-50 font-medium">La Firma</button>
-            <button onClick={() => scrollToSection('contacto')} className="py-3 px-6 text-left hover:bg-slate-50 font-medium">Contacto</button>
+            <button onClick={() => scrollToSection('sobre-nosotros')} className="py-3 px-6 text-left hover:bg-slate-50 font-medium">La Firma</button>
+            <button onClick={() => scrollToSection('ubicacion-contacto')} className="py-3 px-6 text-left hover:bg-slate-50 font-medium">Contacto</button>
           </div>
         )}
       </nav>
 
-      {/* --- HERO SECTION --- */}
-      <header id="inicio" className="relative bg-slate-900 text-white py-20 md:py-32 overflow-hidden">
+      <main className="flex-1">
+        {/* --- HERO SECTION --- */}
+        <header id="hero-inicio" className="relative bg-slate-900 text-white py-20 md:py-32 overflow-hidden">
         {/* Background Pattern (Abstract) */}
         <div className="absolute inset-0 opacity-20">
            <div className="absolute right-0 top-0 w-1/2 h-full bg-amber-500 transform -skew-x-12 translate-x-20"></div>
@@ -138,7 +137,7 @@ const AuriaxesWeb = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               {/* Fixed transition to transition-colors to avoid jank */}
-              <button onClick={() => scrollToSection('contacto')} className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-md font-bold text-lg transition-colors shadow-lg flex items-center justify-center gap-2">
+              <button onClick={() => scrollToSection('ubicacion-contacto')} className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-md font-bold text-lg transition-colors shadow-lg flex items-center justify-center gap-2">
                 Consulta Gratuita <ArrowRight size={20} />
               </button>
               <button onClick={() => scrollToSection('servicios')} className="bg-transparent border-2 border-white/30 hover:border-white text-white px-8 py-4 rounded-md font-bold text-lg transition-colors">
@@ -193,9 +192,9 @@ const AuriaxesWeb = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Card 1: Fiscal */}
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow border-b-4 border-amber-500 group">
-              <div className="w-14 h-14 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center mb-6 group-hover:bg-amber-600 group-hover:text-white transition-colors">
-                <Calculator size={32} />
+            <div id="servicio-fiscal" className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border-b-4 border-amber-500 group text-center">
+              <div className="w-20 h-20 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-sm group-hover:scale-110 group-hover:bg-amber-600 group-hover:text-white transition-all duration-300 group-hover:shadow-lg">
+                <Landmark size={40} strokeWidth={1.5} />
               </div>
               <h4 className="text-xl font-bold mb-3 text-slate-900">Área Fiscal</h4>
               <p className="text-slate-600 mb-4 text-sm">
@@ -210,9 +209,9 @@ const AuriaxesWeb = () => {
             </div>
 
             {/* Card 2: Laboral */}
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow border-b-4 border-slate-900 group">
-              <div className="w-14 h-14 bg-slate-100 text-slate-900 rounded-lg flex items-center justify-center mb-6 group-hover:bg-slate-900 group-hover:text-white transition-colors">
-                <Users size={32} />
+            <div id="servicio-laboral" className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border-b-4 border-slate-900 group text-center">
+              <div className="w-20 h-20 bg-slate-50 text-slate-900 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-sm group-hover:scale-110 group-hover:bg-slate-900 group-hover:text-white transition-all duration-300 group-hover:shadow-lg">
+                <Briefcase size={40} strokeWidth={1.5} />
               </div>
               <h4 className="text-xl font-bold mb-3 text-slate-900">Área Laboral</h4>
               <p className="text-slate-600 mb-4 text-sm">
@@ -227,9 +226,9 @@ const AuriaxesWeb = () => {
             </div>
 
             {/* Card 3: Contable */}
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow border-b-4 border-amber-500 group">
-              <div className="w-14 h-14 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center mb-6 group-hover:bg-amber-600 group-hover:text-white transition-colors">
-                <FileText size={32} />
+            <div id="servicio-contable" className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border-b-4 border-amber-500 group text-center">
+              <div className="w-20 h-20 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-sm group-hover:scale-110 group-hover:bg-amber-600 group-hover:text-white transition-all duration-300 group-hover:shadow-lg">
+                <BarChart4 size={40} strokeWidth={1.5} />
               </div>
               <h4 className="text-xl font-bold mb-3 text-slate-900">Área Contable</h4>
               <p className="text-slate-600 mb-4 text-sm">
@@ -244,9 +243,9 @@ const AuriaxesWeb = () => {
             </div>
 
             {/* Card 4: Emprendedores */}
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow border-b-4 border-slate-900 group">
-              <div className="w-14 h-14 bg-slate-100 text-slate-900 rounded-lg flex items-center justify-center mb-6 group-hover:bg-slate-900 group-hover:text-white transition-colors">
-                <Rocket size={32} />
+            <div id="servicio-emprendedores" className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border-b-4 border-slate-900 group text-center">
+              <div className="w-20 h-20 bg-slate-50 text-slate-900 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-sm group-hover:scale-110 group-hover:bg-slate-900 group-hover:text-white transition-all duration-300 group-hover:shadow-lg">
+                <TrendingUp size={40} strokeWidth={1.5} />
               </div>
               <h4 className="text-xl font-bold mb-3 text-slate-900">Emprendedores</h4>
               <p className="text-slate-600 mb-4 text-sm">
@@ -261,9 +260,9 @@ const AuriaxesWeb = () => {
             </div>
 
              {/* Card 5: Herencias y Particular */}
-             <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow border-b-4 border-amber-500 group">
-              <div className="w-14 h-14 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center mb-6 group-hover:bg-amber-600 group-hover:text-white transition-colors">
-                <ScrollText size={32} />
+             <div id="servicio-herencias-civil" className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border-b-4 border-amber-500 group text-center">
+              <div className="w-20 h-20 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-sm group-hover:scale-110 group-hover:bg-amber-600 group-hover:text-white transition-all duration-300 group-hover:shadow-lg">
+                <Scale size={40} strokeWidth={1.5} />
               </div>
               <h4 className="text-xl font-bold mb-3 text-slate-900">Herencias y Civil</h4>
               <p className="text-slate-600 mb-4 text-sm">
@@ -277,9 +276,9 @@ const AuriaxesWeb = () => {
             </div>
 
              {/* Card 6: Trámites Varios */}
-             <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow border-b-4 border-slate-900 group">
-              <div className="w-14 h-14 bg-slate-100 text-slate-900 rounded-lg flex items-center justify-center mb-6 group-hover:bg-slate-900 group-hover:text-white transition-colors">
-                <Car size={32} />
+             <div id="servicio-tramites-vehiculos" className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border-b-4 border-slate-900 group text-center">
+              <div className="w-20 h-20 bg-slate-50 text-slate-900 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-sm group-hover:scale-110 group-hover:bg-slate-900 group-hover:text-white transition-all duration-300 group-hover:shadow-lg">
+                <Car size={40} strokeWidth={1.5} />
               </div>
               <h4 className="text-xl font-bold mb-3 text-slate-900">Trámites y Vehículos</h4>
               <p className="text-slate-600 mb-4 text-sm">
@@ -296,7 +295,7 @@ const AuriaxesWeb = () => {
       </section>
 
       {/* --- ABOUT / TRUST SECTION --- */}
-      <section id="nosotros" className="py-20 bg-slate-900 text-white">
+      <section id="sobre-nosotros" className="py-20 bg-slate-900 text-white">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
             <div className="grid grid-cols-2 gap-4">
@@ -354,20 +353,20 @@ const AuriaxesWeb = () => {
       </section>
 
       {/* --- CTA STRIP --- */}
-      <div className="bg-amber-500 py-12">
+      <div id="cta-emprendedores" className="bg-amber-500 py-12">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
           <div>
              <h2 className="text-2xl md:text-3xl font-bold text-slate-900">¿Eres Emprendedor?</h2>
              <p className="text-slate-800 mt-1">Te ayudamos con el plan de negocio y la puesta en marcha. Tramitación de subvenciones y ayudas.</p>
           </div>
-          <button onClick={() => scrollToSection('contacto')} className="bg-slate-900 text-white px-8 py-3 rounded-md font-bold shadow-lg hover:bg-slate-800 transition-colors whitespace-nowrap">
+          <button onClick={() => scrollToSection('ubicacion-contacto')} className="bg-slate-900 text-white px-8 py-3 rounded-md font-bold shadow-lg hover:bg-slate-800 transition-colors whitespace-nowrap">
             Agenda tu Cita Hoy
           </button>
         </div>
       </div>
 
-      {/* --- LOCATION & CONTACT --- */}
-      <section id="contacto" className="py-20 bg-white">
+        {/* --- LOCATION & CONTACT --- */}
+        <section id="ubicacion-contacto" className="py-20 bg-white" aria-label="Ubicación y horario">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Contacta con Nosotros</h2>
@@ -380,7 +379,7 @@ const AuriaxesWeb = () => {
               <div className="bg-slate-50 p-6 rounded-xl border border-slate-100 h-full">
                 <h3 className="text-xl font-bold text-slate-900 mb-6">Información de la Oficina</h3>
                 
-                <div className="space-y-6">
+                <address className="space-y-6 not-italic">
                   <div className="flex items-start gap-4">
                     <div className="bg-amber-100 p-3 rounded-full text-amber-600">
                       <MapPin size={24} />
@@ -399,8 +398,8 @@ const AuriaxesWeb = () => {
                     </div>
                     <div>
                       <p className="font-bold text-slate-900">Teléfonos</p>
-                      <p className="text-slate-600 block hover:text-amber-600 transition-colors"><a href="tel:627719812">627 719 812</a> (Móvil)</p>
-                      <p className="text-slate-600 block hover:text-amber-600 transition-colors"><a href="tel:988989767">988 989 767</a> (Fijo)</p>
+                      <a className="text-slate-600 block hover:text-amber-500 transition-colors" href="tel:627719812">627 719 812 (Móvil)</a>
+                      <a className="text-slate-600 block hover:text-amber-500 transition-colors" href="tel:988989767">988 989 767 (Fijo)</a>
                     </div>
                   </div>
 
@@ -410,7 +409,7 @@ const AuriaxesWeb = () => {
                     </div>
                     <div>
                       <p className="font-bold text-slate-900">Email</p>
-                      <p className="text-slate-600"><a href="mailto:contacto@auriaxes.com">contacto@auriaxes.com</a></p>
+                      <a className="text-slate-600 hover:text-amber-500 transition-colors" href="mailto:contacto@auriaxes.com">contacto@auriaxes.com</a>
                     </div>
                   </div>
 
@@ -422,12 +421,11 @@ const AuriaxesWeb = () => {
                       <p className="font-bold text-slate-900">Horario de Invierno</p>
                       <p className="text-slate-600 text-sm">Lunes a Jueves: 09:00 - 19:00</p>
                       <p className="text-slate-600 text-sm">Viernes: 09:00 - 15:00</p>
-                      
                       <p className="font-bold text-slate-900 mt-3">Horario de Verano (Jun-Sep)</p>
                       <p className="text-slate-600 text-sm">Lunes a Viernes: 09:00 - 14:30</p>
                     </div>
                   </div>
-                </div>
+                </address>
               </div>
             </div>
 
@@ -448,7 +446,8 @@ const AuriaxesWeb = () => {
             </div>
           </div>
         </div>
-      </section>
+        </section>
+      </main>
 
       {/* --- FOOTER --- */}
       <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
@@ -496,5 +495,5 @@ const AuriaxesWeb = () => {
   );
 };
 
-export default AuriaxesWeb;
+export default Home;
 
