@@ -15,13 +15,13 @@ const Hero = ({ scrollToSection }) => {
   const prevSlide = () => setCurrentSlide((prev) => (prev === 0 ? 2 : prev - 1));
 
   return (
-    <header id="hero-inicio" className="relative bg-auria-black text-white overflow-hidden group">
+    <header id="hero-inicio" className="relative bg-auria-green-400 md:bg-auria-black text-white overflow-hidden group">
       {/* Grid Container for Stacking Slides */}
       <div className="grid grid-cols-1 grid-rows-1 min-h-[450px] sm:min-h-[550px] lg:min-h-[600px]">
         
         {/* --- SLIDE 1: ORIGINAL HERO CONTENT --- */}
         <div 
-          className={`col-start-1 row-start-1 w-full h-full transition-opacity duration-700 ease-in-out flex items-center py-12 sm:py-16 md:py-24 lg:py-32 ${currentSlide === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
+          className={`col-start-1 row-start-1 w-full h-full transition-opacity duration-700 ease-in-out flex items-center py-12 sm:py-16 md:py-24 lg:py-32 bg-auria-black ${currentSlide === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
         >
            {/* Background Pattern (Abstract) */}
            <div className="absolute inset-0 opacity-20 pointer-events-none">
@@ -85,13 +85,13 @@ const Hero = ({ scrollToSection }) => {
 
         {/* --- SLIDE 2: DGT --- */}
         <div 
-          className={`col-start-1 row-start-1 w-full h-full transition-opacity duration-700 ease-in-out flex items-center justify-center bg-auria-black ${currentSlide === 1 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
+          className={`col-start-1 row-start-1 w-full h-full transition-opacity duration-700 ease-in-out flex items-center justify-center bg-auria-green-400 md:bg-auria-black ${currentSlide === 1 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
         >
           <div className="relative w-full h-full mx-auto flex items-center justify-center">
              <img 
                 src="assets/images/distintivos_dgt.jpg" 
                 alt="Gestión de Distintivos DGT" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain md:object-cover"
                 loading="lazy"
              />
           </div>
@@ -99,13 +99,13 @@ const Hero = ({ scrollToSection }) => {
 
         {/* --- SLIDE 3: TRAMITES --- */}
         <div 
-          className={`col-start-1 row-start-1 w-full h-full transition-opacity duration-700 ease-in-out flex items-center justify-center bg-auria-black ${currentSlide === 2 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
+          className={`col-start-1 row-start-1 w-full h-full transition-opacity duration-700 ease-in-out flex items-center justify-center bg-auria-green-400 md:bg-auria-black ${currentSlide === 2 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
         >
           <div className="relative w-full h-full mx-auto flex items-center justify-center">
              <img 
                 src="assets/images/tramites_trafico.jpg" 
                 alt="Gestión de Trámites de Tráfico" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain md:object-cover"
                 loading="lazy"
              />
           </div>
