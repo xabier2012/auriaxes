@@ -6,8 +6,10 @@ const ContactSection = () => {
     <section id="ubicacion-contacto" className="py-20 bg-white" aria-label="Ubicación y horario">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-auria-black mb-4">Contacta con Nosotros</h2>
-          <p className="text-slate-600">Estamos en Ourense para ayudarte presencialmente u online.</p>
+          <div className="max-w-2xl mx-auto bg-gradient-to-br from-auria-green-400 to-auria-green-500 border-4 border-auria-green-600 rounded-2xl p-8 shadow-xl">
+            <h2 className="text-3xl font-bold text-auria-black mb-4">Contacta con Nosotros</h2>
+            <p className="text-auria-black font-medium">Estamos en Ourense para ayudarte presencialmente u online.</p>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -46,7 +48,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-bold text-auria-black">Email</p>
-                    <a className="text-slate-600 hover:text-auria-green-400 transition-colors" href="mailto:contacto@auriaxes.com">contacto@auriaxes.com</a>
+                    <a className="text-slate-600 hover:text-auria-green-400 transition-colors" href="mailto:gerencia@auriaxes.com">gerencia@auriaxes.com</a>
                   </div>
                 </div>
 

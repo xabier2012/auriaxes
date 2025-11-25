@@ -17,7 +17,7 @@ const Hero = ({ scrollToSection }) => {
   return (
     <header id="hero-inicio" className="relative bg-auria-black text-white overflow-hidden group">
       {/* Grid Container for Stacking Slides */}
-      <div className="grid grid-cols-1 grid-rows-1 min-h-[650px] lg:min-h-[750px]">
+      <div className="grid grid-cols-1 grid-rows-1 min-h-[500px] lg:min-h-[600px]">
         
         {/* --- SLIDE 1: ORIGINAL HERO CONTENT --- */}
         <div 
@@ -85,16 +85,13 @@ const Hero = ({ scrollToSection }) => {
 
         {/* --- SLIDE 2: DGT --- */}
         <div 
-          className={`col-start-1 row-start-1 w-full h-full transition-opacity duration-700 ease-in-out flex items-center justify-center p-4 md:p-12 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-auria-green-300 via-auria-green-400 to-auria-green-600 ${currentSlide === 1 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
+          className={`col-start-1 row-start-1 w-full h-full transition-opacity duration-700 ease-in-out flex items-center justify-center bg-auria-black ${currentSlide === 1 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
         >
           <div className="relative w-full h-full mx-auto flex items-center justify-center">
-             {/* Decorative element for texture */}
-             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay pointer-events-none"></div>
-             
              <img 
                 src="assets/images/distintivos_dgt.jpg" 
                 alt="Gestión de Distintivos DGT" 
-                className="h-[55vh] md:h-[65vh] w-auto object-contain relative z-10 shadow-2xl rounded-lg"
+                className="w-full h-full object-cover"
                 loading="lazy"
              />
           </div>
@@ -102,16 +99,13 @@ const Hero = ({ scrollToSection }) => {
 
         {/* --- SLIDE 3: TRAMITES --- */}
         <div 
-          className={`col-start-1 row-start-1 w-full h-full transition-opacity duration-700 ease-in-out flex items-center justify-center p-4 md:p-12 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-auria-green-300 via-auria-green-400 to-auria-green-600 ${currentSlide === 2 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
+          className={`col-start-1 row-start-1 w-full h-full transition-opacity duration-700 ease-in-out flex items-center justify-center bg-auria-black ${currentSlide === 2 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
         >
           <div className="relative w-full h-full mx-auto flex items-center justify-center">
-             {/* Decorative element for texture */}
-             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay pointer-events-none"></div>
-
              <img 
                 src="assets/images/tramites_trafico.jpg" 
                 alt="Gestión de Trámites de Tráfico" 
-                className="h-[55vh] md:h-[65vh] w-auto object-contain relative z-10 shadow-2xl rounded-lg"
+                className="w-full h-full object-cover"
                 loading="lazy"
              />
           </div>

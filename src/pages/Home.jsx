@@ -122,6 +122,8 @@ const Home = () => {
 
       <main className="flex-1">
         <Hero scrollToSection={scrollToSection} />
+        
+        <CTASection scrollToSection={scrollToSection} />
 
         {/* --- SERVICES SECTION --- */}
         <section id="servicios" className="py-20 bg-slate-50">
@@ -146,7 +148,6 @@ const Home = () => {
         </section>
 
         <AboutSection />
-        <CTASection scrollToSection={scrollToSection} />
         <ContactSection />
       </main>
 

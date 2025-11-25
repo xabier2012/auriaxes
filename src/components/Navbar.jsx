@@ -57,7 +57,7 @@ const Navbar = ({ scrollToSection }) => {
         <div className="hidden md:flex gap-8 font-medium text-slate-600" aria-label="Navegación principal">
           <button onClick={() => handleNavClick('hero-inicio')} className="hover:text-auria-green-600 transition-colors">Inicio</button>
           <button onClick={() => handleNavClick('servicios')} className="hover:text-auria-green-600 transition-colors">Servicios</button>
-          <button onClick={() => handleNavClick('sobre-nosotros')} className="hover:text-auria-green-600 transition-colors">La Firma</button>
+          <button onClick={() => handleNavClick('sobre-nosotros')} className="hover:text-auria-green-600 transition-colors">Sobre Nosotros</button>
           <button onClick={() => handleNavClick('ubicacion-contacto')} className="hover:text-auria-green-600 transition-colors">Contacto</button>
         </div>
 
@@ -83,7 +83,7 @@ const Navbar = ({ scrollToSection }) => {
         <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-slate-100 flex flex-col py-4">
           <button onClick={() => handleNavClick('hero-inicio')} className="py-3 px-6 text-left hover:bg-slate-50 font-medium">Inicio</button>
           <button onClick={() => handleNavClick('servicios')} className="py-3 px-6 text-left hover:bg-slate-50 font-medium">Servicios</button>
-          <button onClick={() => handleNavClick('sobre-nosotros')} className="py-3 px-6 text-left hover:bg-slate-50 font-medium">La Firma</button>
+          <button onClick={() => handleNavClick('sobre-nosotros')} className="py-3 px-6 text-left hover:bg-slate-50 font-medium">Sobre Nosotros</button>
           <button onClick={() => handleNavClick('ubicacion-contacto')} className="py-3 px-6 text-left hover:bg-slate-50 font-medium">Contacto</button>
         </div>
       )}

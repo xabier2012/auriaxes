@@ -10,11 +10,11 @@ const TopBar = () => {
             <Phone size={14} /> 988 045 425
           </span>
           <span className="hidden md:flex items-center gap-2 hover:text-auria-green-400 transition-colors cursor-pointer">
-            <Mail size={14} /> contacto@auriaxes.com
+            <Mail size={14} /> gerencia@auriaxes.com
           </span>
         </div>
         <div className="flex items-center gap-2">
-            <span className="text-amber-400 font-semibold">Atención Presencial y Online</span>
+            <span className="text-auria-green-400 font-semibold">Atención Presencial y Online</span>
             <span className="hidden sm:inline">| Ourense</span>
         </div>
       </div>
