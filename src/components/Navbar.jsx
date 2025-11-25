@@ -28,25 +28,25 @@ const Navbar = ({ scrollToSection }) => {
     <nav id="navegacion-principal" className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-lg py-2' : 'bg-white/95 backdrop-blur py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
           <img
             src="assets/images/auriaxes-asesores.jpg"
             alt="Logotipo de Auriaxes Asesores"
-            className="h-12 md:h-16 w-auto object-contain"
+            className="h-10 sm:h-12 md:h-16 w-auto object-contain"
             loading="lazy"
             decoding="async"
           />
           <img
             src="assets/images/economistas_logo.png"
             alt="Logotipo Economistas"
-            className="h-12 md:h-16 w-auto object-contain"
+            className="h-8 sm:h-10 md:h-16 w-auto object-contain"
             loading="lazy"
             decoding="async"
           />
           <img
             src="assets/images/gestoria_administrativa_logo.png"
             alt="Logotipo Gestoría Administrativa"
-            className="h-12 md:h-16 w-auto object-contain"
+            className="h-8 sm:h-10 md:h-16 w-auto object-contain"
             loading="lazy"
             decoding="async"
           />

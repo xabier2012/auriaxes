@@ -3,65 +3,66 @@ import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 const ContactSection = () => {
   return (
-    <section id="ubicacion-contacto" className="py-20 bg-white" aria-label="Ubicación y horario">
+    <section id="ubicacion-contacto" className="py-12 sm:py-16 md:py-20 bg-white" aria-label="Ubicación y horario">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <div className="max-w-2xl mx-auto bg-gradient-to-br from-auria-green-400 to-auria-green-500 border-4 border-auria-green-600 rounded-2xl p-8 shadow-xl">
-            <h2 className="text-3xl font-bold text-auria-black mb-4">Contacta con Nosotros</h2>
-            <p className="text-auria-black font-medium">Estamos en Ourense para ayudarte presencialmente u online.</p>
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <div className="max-w-2xl mx-auto bg-gradient-to-br from-auria-green-400 to-auria-green-500 border-4 border-auria-green-600 rounded-2xl p-6 sm:p-8 shadow-xl">
+            <h2 className="text-2xl sm:text-3xl font-bold text-auria-black mb-3 sm:mb-4">Contacta con Nosotros</h2>
+            <p className="text-auria-black font-medium text-sm sm:text-base">Estamos en Ourense para ayudarte presencialmente u online.</p>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12">
           {/* Contact Info */}
-          <div className="space-y-8">
-            <div className="bg-slate-50 p-6 rounded-xl border border-slate-100 h-full">
-              <h3 className="text-xl font-bold text-auria-black mb-6">Información de la Oficina</h3>
+          <div className="space-y-6 sm:space-y-8">
+            <div className="bg-slate-50 p-5 sm:p-6 rounded-xl border border-slate-100 h-full">
+              <h3 className="text-lg sm:text-xl font-bold text-auria-black mb-5 sm:mb-6">Información de la Oficina</h3>
               
-              <address className="space-y-6 not-italic">
-                <div className="flex items-start gap-4">
-                  <div className="bg-auria-green-100 p-3 rounded-full text-auria-green-600">
-                    <MapPin size={24} />
+              <address className="space-y-5 sm:space-y-6 not-italic">
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="bg-auria-green-100 p-2.5 sm:p-3 rounded-full text-auria-green-600 flex-shrink-0">
+                    <MapPin className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                   <div>
-                    <p className="font-bold text-auria-black">Dirección</p>
-                    <p className="text-slate-600">Avenida Zamora 37, Bajo B</p>
-                    <p className="text-slate-600">32005, Ourense (Galicia)</p>
-                    <p className="text-xs text-auria-green-600 mt-1 font-semibold">*Acceso movilidad reducida</p>
+                    <p className="font-bold text-auria-black text-sm sm:text-base">Dirección</p>
+                    <p className="text-slate-600 text-sm sm:text-base">Avenida Zamora 37, Bajo B</p>
+                    <p className="text-slate-600 text-sm sm:text-base">32005, Ourense (Galicia)</p>
+                    <p className="text-xs sm:text-sm text-auria-green-600 mt-1 font-semibold">*Acceso movilidad reducida</p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="bg-auria-green-100 p-3 rounded-full text-auria-green-600">
-                    <Phone size={24} />
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="bg-auria-green-100 p-2.5 sm:p-3 rounded-full text-auria-green-600 flex-shrink-0">
+                    <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                   <div>
-                    <p className="font-bold text-auria-black">Teléfonos</p>
-                    <a className="text-slate-600 block hover:text-auria-green-400 transition-colors" href="tel:617098276">617 098 276 (Móvil)</a>
-                    <a className="text-slate-600 block hover:text-auria-green-400 transition-colors" href="tel:988045425">988 045 425 (Fijo)</a>
+                    <p className="font-bold text-auria-black text-sm sm:text-base">Teléfonos</p>
+                    <a className="text-slate-600 block hover:text-auria-green-400 transition-colors text-sm sm:text-base" href="tel:617098276">617 098 276 (Móvil)</a>
+                    <a className="text-slate-600 block hover:text-auria-green-400 transition-colors text-sm sm:text-base" href="tel:988045425">988 045 425 (Fijo)</a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="bg-auria-green-100 p-3 rounded-full text-auria-green-600">
-                    <Mail size={24} />
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="bg-auria-green-100 p-2.5 sm:p-3 rounded-full text-auria-green-600 flex-shrink-0">
+                    <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                   <div>
-                    <p className="font-bold text-auria-black">Email</p>
-                    <a className="text-slate-600 hover:text-auria-green-400 transition-colors" href="mailto:gerencia@auriaxes.com">gerencia@auriaxes.com</a>
+                    <p className="font-bold text-auria-black text-sm sm:text-base">Email</p>
+                    <a className="text-slate-600 hover:text-auria-green-400 transition-colors text-sm sm:text-base break-all" href="mailto:gerencia@auriaxes.com">gerencia@auriaxes.com</a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="bg-auria-green-100 p-3 rounded-full text-auria-green-600">
-                    <Clock size={24} />
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="bg-auria-green-100 p-2.5 sm:p-3 rounded-full text-auria-green-600 flex-shrink-0">
+                    <Clock className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                   <div>
-                    <p className="font-bold text-auria-black">Horario de Invierno</p>
-                    <p className="text-slate-600 text-sm">Lunes a Jueves: 8:30 - 14:00 | Tardes 16:00 - 18:30</p>
-                    <p className="text-slate-600 text-sm">Viernes: 8:30 - 15:00</p>
-                    <p className="font-bold text-auria-black mt-3">Horario de Verano (Jun-Sep)</p>
-                    <p className="text-slate-600 text-sm">Lunes a Viernes: 08:30 - 14:30</p>
+                    <p className="font-bold text-auria-black text-sm sm:text-base">Horario de Invierno</p>
+                    <p className="text-slate-600 text-xs sm:text-sm">Lunes a Jueves: 8:30 - 14:00</p>
+                    <p className="text-slate-600 text-xs sm:text-sm">Tardes: 16:00 - 18:30</p>
+                    <p className="text-slate-600 text-xs sm:text-sm">Viernes: 8:30 - 15:00</p>
+                    <p className="font-bold text-auria-black mt-3 text-sm sm:text-base">Horario de Verano (Jun-Sep)</p>
+                    <p className="text-slate-600 text-xs sm:text-sm">Lunes a Viernes: 08:30 - 14:30</p>
                   </div>
                 </div>
               </address>
