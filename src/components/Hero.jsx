@@ -7,7 +7,7 @@ const Hero = ({ scrollToSection }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev === 2 ? 0 : prev + 1));
-    }, 6000);
+    }, 9000);
     return () => clearInterval(interval);
   }, []);
 
@@ -15,13 +15,13 @@ const Hero = ({ scrollToSection }) => {
   const prevSlide = () => setCurrentSlide((prev) => (prev === 0 ? 2 : prev - 1));
 
   return (
-    <header id="hero-inicio" className="relative bg-auria-green-400 md:bg-auria-black text-white overflow-hidden group">
+    <header id="hero-inicio" className="relative bg-auria-black text-white overflow-hidden group">
       {/* Grid Container for Stacking Slides */}
-      <div className="grid grid-cols-1 grid-rows-1 min-h-[450px] sm:min-h-[550px] lg:min-h-[600px]">
+      <div className="grid grid-cols-1 grid-rows-1 h-[415px] sm:h-[495px] lg:h-[545px]">
         
         {/* --- SLIDE 1: ORIGINAL HERO CONTENT --- */}
         <div 
-          className={`col-start-1 row-start-1 w-full h-full transition-opacity duration-700 ease-in-out flex items-center py-12 sm:py-16 md:py-24 lg:py-32 bg-auria-black ${currentSlide === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
+          className={`col-start-1 row-start-1 w-full h-full transition-opacity duration-700 ease-in-out flex items-center py-6 sm:py-8 md:py-10 lg:py-12 bg-auria-black ${currentSlide === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
         >
            {/* Background Pattern (Abstract) */}
            <div className="absolute inset-0 opacity-20 pointer-events-none">
@@ -30,21 +30,21 @@ const Hero = ({ scrollToSection }) => {
            </div>
            
            <div className="container mx-auto px-4 relative z-10 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-             <div className="space-y-4 sm:space-y-6">
+             <div className="space-y-2 sm:space-y-3">
                <div className="inline-block px-3 py-1 bg-auria-green-400/20 border border-auria-green-400 text-auria-green-400 text-xs sm:text-sm font-semibold rounded-full mb-2">
                  Más de 10 años en el sector
                </div>
-               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
                  Tu tranquilidad fiscal y contable es <span className="text-auria-green-400">nuestra prioridad.</span>
                </h2>
                <p className="text-slate-300 text-base sm:text-lg max-w-lg">
                  Asesoría integral para Empresas, Autónomos y Emprendedores. Proporcionamos información continua presencial y online para que obtengas respuestas al instante.
                </p>
-               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
-                 <button onClick={() => scrollToSection('ubicacion-contacto')} className="bg-auria-green-400 hover:bg-auria-green-500 text-auria-black px-6 sm:px-8 py-3 sm:py-4 rounded-md font-bold text-base sm:text-lg transition-colors shadow-lg flex items-center justify-center gap-2">
+               <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-1 sm:pt-2">
+                 <button onClick={() => scrollToSection('ubicacion-contacto')} className="bg-auria-green-400 hover:bg-auria-green-500 text-auria-black px-5 sm:px-6 py-2 sm:py-3 rounded-md font-bold text-sm sm:text-base transition-colors shadow-lg flex items-center justify-center gap-2">
                    Consulta Gratuita <ArrowRight size={20} />
                  </button>
-                 <button onClick={() => scrollToSection('servicios')} className="bg-transparent border-2 border-white/30 hover:border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-md font-bold text-base sm:text-lg transition-colors">
+                 <button onClick={() => scrollToSection('servicios')} className="bg-transparent border-2 border-white/30 hover:border-white text-white px-5 sm:px-6 py-2 sm:py-3 rounded-md font-bold text-sm sm:text-base transition-colors">
                    Nuestros Servicios
                  </button>
                </div>
@@ -52,8 +52,8 @@ const Hero = ({ scrollToSection }) => {
              
              {/* Hero Image / Graphic */}
              <div className="hidden md:block relative">
-               <div className="bg-auria-black-800 p-6 lg:p-8 rounded-xl shadow-2xl border border-gray-700 transform rotate-2 hover:rotate-0 transition-transform duration-500">
-                 <div className="flex items-center justify-between mb-8 border-b border-gray-700 pb-4">
+               <div className="bg-auria-black-800 p-4 lg:p-5 rounded-xl shadow-2xl border border-gray-700 transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                 <div className="flex items-center justify-between mb-4 border-b border-gray-700 pb-2">
                    <div className="flex gap-2">
                      <div className="w-3 h-3 rounded-full bg-red-500"></div>
                      <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
@@ -85,13 +85,13 @@ const Hero = ({ scrollToSection }) => {
 
         {/* --- SLIDE 2: DGT --- */}
         <div 
-          className={`col-start-1 row-start-1 w-full h-full transition-opacity duration-700 ease-in-out flex items-center justify-center bg-auria-green-400 md:bg-auria-black ${currentSlide === 1 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
+          className={`col-start-1 row-start-1 w-full h-full transition-opacity duration-700 ease-in-out flex items-center justify-center bg-auria-black ${currentSlide === 1 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
         >
           <div className="relative w-full h-full mx-auto flex items-center justify-center">
              <img 
                 src="assets/images/distintivos_dgt.jpg" 
                 alt="Gestión de Distintivos DGT" 
-                className="w-full h-full object-contain md:object-cover"
+                className="h-full max-w-full object-contain"
                 loading="lazy"
              />
           </div>
@@ -99,13 +99,13 @@ const Hero = ({ scrollToSection }) => {
 
         {/* --- SLIDE 3: TRAMITES --- */}
         <div 
-          className={`col-start-1 row-start-1 w-full h-full transition-opacity duration-700 ease-in-out flex items-center justify-center bg-auria-green-400 md:bg-auria-black ${currentSlide === 2 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
+          className={`col-start-1 row-start-1 w-full h-full transition-opacity duration-700 ease-in-out flex items-center justify-center bg-auria-black ${currentSlide === 2 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
         >
           <div className="relative w-full h-full mx-auto flex items-center justify-center">
              <img 
                 src="assets/images/tramites_trafico.jpg" 
                 alt="Gestión de Trámites de Tráfico" 
-                className="w-full h-full object-contain md:object-cover"
+                className="h-full max-w-full object-contain"
                 loading="lazy"
              />
           </div>

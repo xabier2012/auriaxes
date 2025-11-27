@@ -10,9 +10,9 @@ const TopBar = () => {
             <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" /> 
             <span className="text-xs sm:text-sm">988 045 425</span>
           </a>
-          <a href="mailto:gerencia@auriaxes.com" className="flex items-center gap-1.5 sm:gap-2 hover:text-auria-green-400 transition-colors">
+          <a href="mailto:contacto@auriaxes.com" className="flex items-center gap-1.5 sm:gap-2 hover:text-auria-green-400 transition-colors">
             <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" /> 
-            <span className="text-xs sm:text-sm truncate">gerencia@auriaxes.com</span>
+            <span className="text-xs sm:text-sm truncate">contacto@auriaxes.com</span>
           </a>
         </div>
         <div className="flex items-center gap-2 text-right">

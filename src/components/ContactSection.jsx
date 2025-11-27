@@ -6,9 +6,20 @@ const ContactSection = () => {
     <section id="ubicacion-contacto" className="py-12 sm:py-16 md:py-20 bg-white" aria-label="Ubicación y horario">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
-          <div className="max-w-2xl mx-auto bg-gradient-to-br from-auria-green-400 to-auria-green-500 border-4 border-auria-green-600 rounded-2xl p-6 sm:p-8 shadow-xl">
-            <h2 className="text-2xl sm:text-3xl font-bold text-auria-black mb-3 sm:mb-4">Contacta con Nosotros</h2>
-            <p className="text-auria-black font-medium text-sm sm:text-base">Estamos en Ourense para ayudarte presencialmente u online.</p>
+          <div className="max-w-3xl mx-auto relative">
+            <div className="absolute inset-0 bg-auria-green-400/10 blur-3xl rounded-full pointer-events-none"></div>
+            <div className="relative bg-white/80 backdrop-blur-sm border border-auria-green-100 rounded-3xl p-8 sm:p-10 shadow-2xl text-center">
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-auria-green-50 text-auria-green-600 mb-4">
+                 <Mail className="w-6 h-6" />
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-auria-black mb-3 tracking-tight">
+                Hablemos de tu <span className="text-auria-green-500">Negocio</span>
+              </h2>
+              <p className="text-slate-500 text-lg max-w-xl mx-auto leading-relaxed">
+                Estamos en Ourense para ofrecerte soluciones reales. <br className="hidden sm:block"/>
+                Visítanos o contáctanos online para empezar.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -48,7 +59,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-bold text-auria-black text-sm sm:text-base">Email</p>
-                    <a className="text-slate-600 hover:text-auria-green-400 transition-colors text-sm sm:text-base break-all" href="mailto:gerencia@auriaxes.com">gerencia@auriaxes.com</a>
+                    <a className="text-slate-600 hover:text-auria-green-400 transition-colors text-sm sm:text-base break-all" href="mailto:contacto@auriaxes.com">contacto@auriaxes.com</a>
                   </div>
                 </div>
 
