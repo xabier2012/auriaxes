@@ -7,6 +7,7 @@
     "dev": "node ./node_modules/vite/bin/vite.js",
     "build": "node ./node_modules/vite/bin/vite.js build",
     "preview": "node ./node_modules/vite/bin/vite.js preview",
+    "start": "node ./node_modules/serve/build/main.js dist -l 3001",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist --no-history --add"
   },
@@ -19,7 +20,8 @@
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.27",
     "tailwindcss": "^3.3.3",
-    "vite": "^4.4.5"
+    "vite": "^4.4.5",
+    "serve": "^14.2.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
