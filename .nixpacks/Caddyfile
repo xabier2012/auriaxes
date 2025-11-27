@@ -1,25 +1,35 @@
 :80 {
     root * /app/dist
     
-    # Configurar tipos MIME correctos
-    @js path *.js *.mjs
-    header @js Content-Type application/javascript
+    # Configurar tipos MIME correctos para archivos estáticos
+    @js path *.js *.mjs *.jsx
+    header @js Content-Type "application/javascript; charset=utf-8"
     
     @css path *.css
-    header @css Content-Type text/css
+    header @css Content-Type "text/css; charset=utf-8"
     
     @json path *.json
-    header @json Content-Type application/json
+    header @json Content-Type "application/json; charset=utf-8"
     
     @svg path *.svg
-    header @svg Content-Type image/svg+xml
+    header @svg Content-Type "image/svg+xml"
+    
+    @png path *.png
+    header @png Content-Type "image/png"
+    
+    @jpg path *.jpg *.jpeg
+    header @jpg Content-Type "image/jpeg"
+    
+    @ico path *.ico
+    header @ico Content-Type "image/x-icon"
     
     # Habilitar compresión
     encode gzip
     
-    # Servir archivos estáticos
+    # Servir archivos estáticos ANTES del fallback
     file_server
     
-    # SPA fallback - redirige todas las rutas a index.html
-    try_files {path} /index.html
+    # Solo aplicar SPA fallback para rutas que NO sean archivos estáticos
+    @not_assets not path /assets/* /favicon.* /*.js /*.css /*.png /*.jpg /*.jpeg /*.svg /*.ico
+    rewrite @not_assets /index.html
 }
