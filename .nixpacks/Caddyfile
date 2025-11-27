@@ -1,0 +1,25 @@
+:80 {
+    root * /app/dist
+    
+    # Configurar tipos MIME correctos
+    @js path *.js *.mjs
+    header @js Content-Type application/javascript
+    
+    @css path *.css
+    header @css Content-Type text/css
+    
+    @json path *.json
+    header @json Content-Type application/json
+    
+    @svg path *.svg
+    header @svg Content-Type image/svg+xml
+    
+    # Habilitar compresión
+    encode gzip
+    
+    # Servir archivos estáticos
+    file_server
+    
+    # SPA fallback - redirige todas las rutas a index.html
+    try_files {path} /index.html
+}

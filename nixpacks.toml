@@ -3,11 +3,14 @@
 
 providers = ["node"]
 
+[phases.setup]
+nixPkgs = ["nodejs_18", "caddy"]
+
 [phases.install]
 cmds = ["npm ci --include=dev"]
 
 [phases.build]
-cmds = ["npm run build"]
+cmds = ["npm run build", "cp .nixpacks/Caddyfile /app/Caddyfile"]
 
-[staticAssets]
-path = "dist"
+[start]
+cmd = "caddy run --config /app/Caddyfile --adapter caddyfile"
