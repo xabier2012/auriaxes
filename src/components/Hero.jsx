@@ -17,11 +17,11 @@ const Hero = ({ scrollToSection }) => {
   return (
     <header id="hero-inicio" className="relative bg-auria-black text-white overflow-hidden group">
       {/* Grid Container for Stacking Slides */}
-      <div className="grid grid-cols-1 grid-rows-1 h-[350px] sm:h-[495px] lg:h-[545px]">
+      <div className="grid grid-cols-1 grid-rows-1 h-[300px] sm:h-[495px] lg:h-[545px]">
         
         {/* --- SLIDE 1: ORIGINAL HERO CONTENT --- */}
         <div 
-          className={`col-start-1 row-start-1 w-full h-full transition-opacity duration-700 ease-in-out flex items-center py-6 sm:py-8 md:py-10 lg:py-12 bg-auria-black ${currentSlide === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
+          className={`col-start-1 row-start-1 w-full h-full transition-opacity duration-700 ease-in-out flex items-center py-3 sm:py-8 md:py-10 lg:py-12 bg-auria-black ${currentSlide === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
         >
            {/* Background Pattern (Abstract) */}
            <div className="absolute inset-0 opacity-20 pointer-events-none">
@@ -30,7 +30,7 @@ const Hero = ({ scrollToSection }) => {
            </div>
            
            <div className="container mx-auto px-4 relative z-10 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-             <div className="space-y-2 sm:space-y-3">
+             <div className="space-y-1 sm:space-y-3">
                <div className="inline-block px-3 py-1 bg-auria-green-400/20 border border-auria-green-400 text-auria-green-400 text-xs sm:text-sm font-semibold rounded-full mb-2">
                  Más de 10 años en el sector
                </div>
@@ -112,24 +112,36 @@ const Hero = ({ scrollToSection }) => {
         </div>
       </div>
 
-      {/* --- CONTROLS --- */}
+      {/* --- MOBILE TOUCH AREAS (INVISIBLE) --- */}
+      <div 
+        onClick={prevSlide}
+        className="absolute left-0 top-0 w-1/3 h-full z-20 sm:hidden cursor-pointer"
+        aria-label="Anterior slide"
+      />
+      <div 
+        onClick={nextSlide}
+        className="absolute right-0 top-0 w-1/3 h-full z-20 sm:hidden cursor-pointer"
+        aria-label="Siguiente slide"
+      />
+
+      {/* --- CONTROLS (DESKTOP/TABLET) --- */}
       <button 
         onClick={prevSlide} 
-        className="absolute left-2 sm:left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 bg-black/30 hover:bg-auria-green-400 hover:text-auria-black p-2 md:p-3 rounded-full text-white backdrop-blur-sm transition-all opacity-60 sm:opacity-0 group-hover:opacity-100"
+        className="absolute left-2 sm:left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 bg-black/30 hover:bg-auria-green-400 hover:text-auria-black p-2 md:p-3 rounded-full text-white backdrop-blur-sm transition-all hidden sm:opacity-0 sm:block group-hover:opacity-100"
         aria-label="Anterior"
       >
         <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
       </button>
       <button 
         onClick={nextSlide} 
-        className="absolute right-2 sm:right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 bg-black/30 hover:bg-auria-green-400 hover:text-auria-black p-2 md:p-3 rounded-full text-white backdrop-blur-sm transition-all opacity-60 sm:opacity-0 group-hover:opacity-100"
+        className="absolute right-2 sm:right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 bg-black/30 hover:bg-auria-green-400 hover:text-auria-black p-2 md:p-3 rounded-full text-white backdrop-blur-sm transition-all hidden sm:opacity-0 sm:block group-hover:opacity-100"
         aria-label="Siguiente"
       >
         <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
       </button>
 
       {/* --- INDICATORS --- */}
-      <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-30 flex gap-2 sm:gap-3 bg-black/20 px-3 sm:px-4 py-2 rounded-full backdrop-blur-sm">
+      <div className="absolute bottom-2 sm:bottom-6 left-1/2 -translate-x-1/2 z-30 flex gap-2 sm:gap-3 bg-black/20 px-3 sm:px-4 py-2 rounded-full backdrop-blur-sm">
         {[0, 1, 2].map(idx => (
           <button 
             key={idx} 
