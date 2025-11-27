@@ -1,0 +1,16 @@
+node_modules/
+.git/
+.env*
+.DS_Store
+*.log
+.vite/
+.cache/
+src/
+public/
+*.md
+README.md
+.gitignore
+vite.config.js
+tailwind.config.js
+postcss.config.js
+package-lock.json
