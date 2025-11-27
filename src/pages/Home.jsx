@@ -64,7 +64,7 @@ const servicesData = [
     id: "servicio-emprendedores",
     icon: TrendingUp,
     title: "Emprendedores",
-    description: "Te ayudamos en la puesta en marcha. Asesoramiento inicial para usuarios PVG y startups.",
+    description: "Te ayudamos en la puesta en marcha.",
     items: [
       "Plan de Negocio y Viabilidad",
       "Tramitación Subvenciones",

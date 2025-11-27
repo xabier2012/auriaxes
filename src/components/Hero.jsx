@@ -17,7 +17,7 @@ const Hero = ({ scrollToSection }) => {
   return (
     <header id="hero-inicio" className="relative bg-auria-black text-white overflow-hidden group">
       {/* Grid Container for Stacking Slides */}
-      <div className="grid grid-cols-1 grid-rows-1 h-[415px] sm:h-[495px] lg:h-[545px]">
+      <div className="grid grid-cols-1 grid-rows-1 h-[350px] sm:h-[495px] lg:h-[545px]">
         
         {/* --- SLIDE 1: ORIGINAL HERO CONTENT --- */}
         <div 
