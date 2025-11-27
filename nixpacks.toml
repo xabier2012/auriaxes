@@ -4,7 +4,7 @@
 providers = ["node"]
 
 [phases.setup]
-nixPkgs = ["nodejs_18", "caddy"]
+nixPkgs = ["nodejs_18"]
 
 [phases.install]
 cmds = ["npm ci --include=dev"]
