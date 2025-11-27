@@ -1,7 +1,7 @@
 # Nixpacks configuration for Dokploy deployment
+# Sirve archivos estáticos desde dist/ en puerto 80
 
-[phases.setup]
-nixPkgs = ["nodejs_18"]
+providers = ["node"]
 
 [phases.install]
 cmds = ["npm ci --include=dev"]
@@ -9,5 +9,5 @@ cmds = ["npm ci --include=dev"]
 [phases.build]
 cmds = ["npm run build"]
 
-[start]
-cmd = "npm run start"
+[staticAssets]
+path = "dist"
