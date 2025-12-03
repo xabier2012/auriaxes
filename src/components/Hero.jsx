@@ -34,9 +34,9 @@ const Hero = ({ scrollToSection }) => {
                <div className="inline-block px-3 py-1 bg-auria-green-400/20 border border-auria-green-400 text-auria-green-400 text-xs sm:text-sm font-semibold rounded-full mb-2">
                  Más de 10 años en el sector
                </div>
-               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
                  Tu tranquilidad fiscal y contable es <span className="text-auria-green-400">nuestra prioridad.</span>
-               </h2>
+               </h1>
                <p className="text-slate-300 text-base sm:text-lg max-w-lg">
                  Asesoría integral para Empresas, Autónomos y Emprendedores. Proporcionamos información continua presencial y online para que obtengas respuestas al instante.
                </p>
@@ -90,9 +90,11 @@ const Hero = ({ scrollToSection }) => {
           <div className="relative w-full h-full mx-auto flex items-center justify-center">
              <img 
                 src="assets/images/distintivos_dgt.jpg" 
-                alt="Gestión de Distintivos DGT" 
+                alt="Gestión de Distintivos Ambientales DGT - Auriaxes Asesores" 
                 className="h-full max-w-full object-contain"
                 loading="lazy"
+                width="800"
+                height="495"
              />
           </div>
         </div>
@@ -104,9 +106,11 @@ const Hero = ({ scrollToSection }) => {
           <div className="relative w-full h-full mx-auto flex items-center justify-center">
              <img 
                 src="assets/images/tramites_trafico.jpg" 
-                alt="Gestión de Trámites de Tráfico" 
+                alt="Trámites de Tráfico y Vehículos - Auriaxes Asesores Ourense" 
                 className="h-full max-w-full object-contain"
                 loading="lazy"
+                width="800"
+                height="495"
              />
           </div>
         </div>

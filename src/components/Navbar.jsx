@@ -31,26 +31,32 @@ const Navbar = ({ scrollToSection }) => {
         <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
           <img
             src="assets/images/auriaxes-asesores.jpg"
-            alt="Logotipo de Auriaxes Asesores"
+            alt="Auriaxes Asesores - Asesoría Fiscal y Contable Ourense"
             className="h-10 sm:h-12 md:h-16 w-auto object-contain"
-            loading="lazy"
+            loading="eager"
             decoding="async"
+            width="120"
+            height="64"
           />
           <img
             src="assets/images/economistas_logo.png"
-            alt="Logotipo Economistas"
+            alt="Colegio de Economistas de Galicia"
             className="h-8 sm:h-10 md:h-16 w-auto object-contain"
-            loading="lazy"
+            loading="eager"
             decoding="async"
+            width="80"
+            height="64"
           />
           <img
             src="assets/images/gestoria_administrativa_logo.png"
-            alt="Logotipo Gestoría Administrativa"
+            alt="Colegio de Gestores Administrativos"
             className="h-8 sm:h-10 md:h-16 w-auto object-contain"
-            loading="lazy"
+            loading="eager"
             decoding="async"
+            width="80"
+            height="64"
           />
-          <h1 className="sr-only">AURIAXES Asesores</h1>
+          <span className="sr-only">AURIAXES Asesores - Asesoría Integral en Ourense</span>
         </div>
 
         {/* Desktop Menu */}

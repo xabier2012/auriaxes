@@ -1,0 +1,37 @@
+# robots.txt para Auriaxes Asesores
+# Permite el acceso a todos los bots de búsqueda
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://auriaxes.com/sitemap.xml
+
+# Bots específicos
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Bloquear acceso a archivos de configuración y directorios internos
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /src/
+Disallow: /*.json$
+Disallow: /*.config.js$
+
+# Permitir acceso a recursos públicos
+Allow: /assets/
+Allow: /favicon.ico
+Allow: /sitemap.xml
+Allow: /robots.txt
+
+# Crawl-delay (opcional, para ser amable con el servidor)
+# Crawl-delay: 1

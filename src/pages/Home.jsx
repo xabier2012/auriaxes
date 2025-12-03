@@ -114,7 +114,7 @@ const Home = () => {
         title="Auriaxes Asesores | Asesoría Fiscal, Laboral y Contable en Ourense"
         description="Asesoría integral en Ourense para empresas, autónomos y emprendedores. Fiscal, laboral, contable, herencias y trámites de vehículos. Atención presencial y online."
         keywords="asesoría ourense, gestoría, fiscal, laboral, contable, autónomos, empresas, emprendedores, herencias, vehículos, auriaxes"
-        canonical="https://auriaxes.com"
+        canonical="https://auriaxes.com/"
       />
       
       <TopBar />
@@ -126,15 +126,15 @@ const Home = () => {
         <CTASection scrollToSection={scrollToSection} />
 
         {/* --- SERVICES SECTION --- */}
-        <section id="servicios" className="py-12 sm:py-16 md:py-20 bg-slate-50">
+        <section id="servicios" className="py-12 sm:py-16 md:py-20 bg-slate-50" aria-labelledby="servicios-heading">
           <div className="container mx-auto px-4">
-            <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12 md:mb-16">
-              <h3 className="text-auria-green-600 font-bold uppercase tracking-wider text-xs sm:text-sm mb-2">Qué hacemos</h3>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-auria-black mb-3 sm:mb-4">Soluciones para Autónomos y Empresas</h2>
+            <header className="text-center max-w-3xl mx-auto mb-10 sm:mb-12 md:mb-16">
+              <p className="text-auria-green-600 font-bold uppercase tracking-wider text-xs sm:text-sm mb-2">Qué hacemos</p>
+              <h2 id="servicios-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-auria-black mb-3 sm:mb-4">Soluciones para Autónomos y Empresas</h2>
               <p className="text-gray-600 text-sm sm:text-base">
                 Servicios adaptados a tus necesidades, desde la contabilidad diaria hasta situaciones complejas como herencias o rentas del extranjero.
               </p>
-            </div>
+            </header>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {servicesData.map((service) => (

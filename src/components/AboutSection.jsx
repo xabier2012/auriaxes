@@ -3,14 +3,14 @@ import { CheckCircle } from 'lucide-react';
 
 const AboutSection = () => {
   return (
-    <section id="sobre-nosotros" className="relative overflow-hidden">
+    <section id="sobre-nosotros" className="relative overflow-hidden" aria-labelledby="sobre-nosotros-heading">
       {/* === MOBILE LAYOUT === */}
       <div className="md:hidden">
         {/* Part 1: Black background with green text */}
         <div className="bg-auria-black py-8 px-4">
           <div className="container mx-auto">
-            <h3 className="text-auria-green-400 font-bold uppercase tracking-wider text-xs sm:text-sm">Por qué elegirnos</h3>
-            <h2 className="text-2xl sm:text-3xl font-bold leading-tight text-white mt-3">Interacción en tiempo real y experiencia consolidada.</h2>
+            <p className="text-auria-green-400 font-bold uppercase tracking-wider text-xs sm:text-sm">Por qué elegirnos</p>
+            <h2 id="sobre-nosotros-heading" className="text-2xl sm:text-3xl font-bold leading-tight text-white mt-3">Interacción en tiempo real y experiencia consolidada.</h2>
           </div>
         </div>
         {/* Part 2: Green background with black text */}
@@ -25,7 +25,7 @@ const AboutSection = () => {
                   <CheckCircle size={14} className="text-auria-green-400" />
                 </div>
                 <div>
-                  <h5 className="font-bold text-auria-black text-sm sm:text-base">Profesionales Cualificados</h5>
+                  <h3 className="font-bold text-auria-black text-sm sm:text-base">Profesionales Cualificados</h3>
                   <p className="text-xs sm:text-sm text-auria-black-800">Equipo multidisciplinar con experiencia desde 2013 en fiscalidad, contabilidad y derecho laboral.</p>
                 </div>
               </li>
@@ -34,7 +34,7 @@ const AboutSection = () => {
                   <CheckCircle size={14} className="text-auria-green-400" />
                 </div>
                 <div>
-                  <h5 className="font-bold text-auria-black text-sm sm:text-base">Tecnología y Rapidez</h5>
+                  <h3 className="font-bold text-auria-black text-sm sm:text-base">Tecnología y Rapidez</h3>
                   <p className="text-xs sm:text-sm text-auria-black-800">Interactúa con nosotros en tiempo real. Tramitación telemática de declaraciones y Sistema RED.</p>
                 </div>
               </li>
@@ -43,7 +43,7 @@ const AboutSection = () => {
                   <CheckCircle size={14} className="text-auria-green-400" />
                 </div>
                 <div>
-                  <h5 className="font-bold text-auria-black text-sm sm:text-base">Servicio 360º</h5>
+                  <h3 className="font-bold text-auria-black text-sm sm:text-base">Servicio 360º</h3>
                   <p className="text-xs sm:text-sm text-auria-black-800">Desde el plan de viabilidad para emprendedores hasta la gestión de herencias y patrimonio.</p>
                 </div>
               </li>
@@ -73,8 +73,8 @@ const AboutSection = () => {
           <div className="grid grid-cols-2 gap-12 items-center">
             <div></div>
             <div className="space-y-6 text-white py-12">
-              <h3 className="text-auria-green-400 font-bold uppercase tracking-wider text-sm">Por qué elegirnos</h3>
-              <h2 className="text-3xl md:text-4xl font-bold leading-tight">Interacción en tiempo real y experiencia consolidada.</h2>
+              <p className="text-auria-green-400 font-bold uppercase tracking-wider text-sm">Por qué elegirnos</p>
+              <h2 id="sobre-nosotros-heading" className="text-3xl md:text-4xl font-bold leading-tight">Interacción en tiempo real y experiencia consolidada.</h2>
               <p className="text-gray-300 text-lg leading-relaxed">
                 En <strong>Auriaxes Asesores</strong> proporcionamos información continua tanto de forma presencial como online, permitiéndote obtener respuestas al instante a tus problemas.
               </p>
@@ -84,7 +84,7 @@ const AboutSection = () => {
                     <CheckCircle size={14} className="text-white" />
                   </div>
                   <div>
-                    <h5 className="font-bold text-white text-base">Profesionales Cualificados</h5>
+                    <h3 className="font-bold text-white text-base">Profesionales Cualificados</h3>
                     <p className="text-sm text-gray-400">Equipo multidisciplinar con experiencia desde 2013 en fiscalidad, contabilidad y derecho laboral.</p>
                   </div>
                 </li>
@@ -93,7 +93,7 @@ const AboutSection = () => {
                     <CheckCircle size={14} className="text-white" />
                   </div>
                   <div>
-                    <h5 className="font-bold text-white text-base">Tecnología y Rapidez</h5>
+                    <h3 className="font-bold text-white text-base">Tecnología y Rapidez</h3>
                     <p className="text-sm text-gray-400">Interactúa con nosotros en tiempo real. Tramitación telemática de declaraciones y Sistema RED.</p>
                   </div>
                 </li>
@@ -102,7 +102,7 @@ const AboutSection = () => {
                     <CheckCircle size={14} className="text-white" />
                   </div>
                   <div>
-                    <h5 className="font-bold text-white text-base">Servicio 360º</h5>
+                    <h3 className="font-bold text-white text-base">Servicio 360º</h3>
                     <p className="text-sm text-gray-400">Desde el plan de viabilidad para emprendedores hasta la gestión de herencias y patrimonio.</p>
                   </div>
                 </li>

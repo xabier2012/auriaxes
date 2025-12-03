@@ -1,0 +1,22 @@
+{
+  "name": "Auriaxes Asesores",
+  "short_name": "Auriaxes",
+  "description": "Asesoría fiscal, laboral y contable en Ourense",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0f172a",
+  "orientation": "portrait-primary",
+  "lang": "es",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/assets/images/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "finance"],
+  "scope": "/"
+}
