@@ -24,12 +24,13 @@ Allow: /
 Disallow: /node_modules/
 Disallow: /.git/
 Disallow: /src/
-Disallow: /*.json$
-Disallow: /*.config.js$
+Disallow: /*.json
+Disallow: /*.config.js
 
 # Permitir acceso a recursos públicos
 Allow: /assets/
 Allow: /favicon.ico
+Allow: /site.webmanifest
 Allow: /sitemap.xml
 Allow: /robots.txt
 
