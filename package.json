@@ -3,6 +3,9 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -12,16 +15,16 @@
     "deploy": "gh-pages -d dist --no-history --add"
   },
   "dependencies": {
+    "@vitejs/plugin-react": "^4.0.3",
+    "autoprefixer": "^10.4.14",
     "lucide-react": "^0.263.1",
+    "postcss": "^8.4.27",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet-async": "^2.0.5",
-    "@vitejs/plugin-react": "^4.0.3",
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.27",
+    "serve": "^14.2.1",
     "tailwindcss": "^3.3.3",
-    "vite": "^4.4.5",
-    "serve": "^14.2.1"
+    "vite": "^7.3.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
